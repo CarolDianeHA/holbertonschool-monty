@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
-*split_line- split string in to tokens
+*tokenizer- split string in to tokens
 *@lineptr: input
 *Return: str, needs to be free
 */

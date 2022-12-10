@@ -12,13 +12,15 @@
 
 void matcher(char **str, char *lineptr, stack_t **h, FILE *fp, unsigned int linenum)
 {
-
-	int i;
 	instruction_t fmt[] =
 	{
 		{"push", _push},
 		{NULL,NULL}
 	};
+	int i;
+	(void)lineptr;
+	(void)fp;
+
 	if (strcmp(str[0], "push")  == 0)
 	{	if (str[1])
 		linenum = atoi(str[1]);
@@ -32,4 +34,3 @@ void matcher(char **str, char *lineptr, stack_t **h, FILE *fp, unsigned int line
 		}
 	}
 }
-

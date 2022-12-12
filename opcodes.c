@@ -33,8 +33,9 @@ void _push(stack_t **stack, unsigned int num)
  */
 void _pall(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp = *stack;
-
+	stack_t *tmp = NULL;
+	if (!stack || !*stack)
+		return;
 	(void) line_number;
 	tmp = *stack;
 	while (tmp != NULL)

@@ -16,6 +16,7 @@ FILE *fp, unsigned int linenum)
 	instruction_t fmt[] = {
 		{"push", _push},
 		{"pall", _pall},
+		{"pint", _pint},
 		{NULL, NULL},
 	};
 	int i;

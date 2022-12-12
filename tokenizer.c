@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
-*tokenizer- split string in to tokens
-*@lineptr: input
-*Return: str, needs to be free
-*/
+ *tokenizer- split string in to tokens
+ *@lineptr: input
+ *Return: str, needs to be free
+ */
 
 char **tokenizer(char *lineptr)
 {

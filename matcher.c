@@ -11,7 +11,7 @@
  */
 
 void matcher(char **str, char *lineptr, stack_t **h,
-FILE *fp, unsigned int linenum)
+		FILE *fp, unsigned int linenum)
 {
 	instruction_t fmt[] = {
 		{"push", _push},
@@ -26,7 +26,7 @@ FILE *fp, unsigned int linenum)
 	if (strcmp(str[0], "push")  == 0)
 	{
 		if (str[1])
-		linenum = atoi(str[1]);
+			linenum = atoi(str[1]);
 	}
 	for (i = 0; fmt[i].opcode != NULL; i++)
 	{

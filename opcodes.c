@@ -4,7 +4,7 @@
  * @stack: ...
  * @num: ...
  * Return: nothing
-*/
+ */
 void _push(stack_t **stack, unsigned int num)
 {
 	stack_t *newNode;
@@ -30,7 +30,7 @@ void _push(stack_t **stack, unsigned int num)
  * @h: ...
  * @linenum: ...
  * Return: nothing
-*/
+ */
 void _pall(stack_t **h, unsigned int linenum)
 {
 	stack_t *tmp = NULL;

@@ -27,18 +27,18 @@ void _push(stack_t **stack, unsigned int num)
 }
 /**
  * _pall - ...
- * @h: ...
+ * @stack: ...
  * @line_number: ...
  * Return: nothing
  */
-void _pall(stack_t **h, unsigned int line_number)
+void _pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp = NULL;
 
-	if (!h || !*h)
+	if (!stack || !*stack)
 		return;
 	(void) line_number;
-	tmp = *h;
+	tmp = *stack;
 	while (tmp != NULL)
 	{
 		printf("%d\n", tmp->n);

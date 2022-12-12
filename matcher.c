@@ -18,6 +18,7 @@ void matcher(char **str, char *lineptr, stack_t **h,
 		{"pall", _pall},
 		{"pint", _pint},
 		{"nop", _nop},
+		{"swap", _swap},
 		{NULL, NULL},
 	};
 	int i;

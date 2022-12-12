@@ -28,6 +28,8 @@ int main(int ac, char **av)
 		linenum++;
 
 	}
+	free(lineptr);
+	free(head);
 	fclose(fp);
 	return (0);
 }

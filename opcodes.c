@@ -31,15 +31,12 @@ void _push(stack_t **stack, unsigned int num)
  * @linenum: ...
  * Return: nothing
  */
-void _pall(stack_t **h, unsigned int linenum)
+void _pall(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp = NULL;
+	stack_t *tmp = *stack;
 
-	if (!h || !*h)
-		return;
-
-	(void) linenum;
-	tmp = *h;
+	(void) line_number;
+	tmp = *stack;
 	while (tmp != NULL)
 	{
 		printf("%d\n", tmp->n);

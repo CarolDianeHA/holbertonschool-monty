@@ -8,7 +8,7 @@ void free_lineptr(stack_t **head)
 {
 	if (!head)
 		return;
-
+	
 	while (*head && (*head)->next)
 	{
 		*head = (*head)->next;

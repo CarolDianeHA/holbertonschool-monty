@@ -41,4 +41,5 @@ FILE *fp, unsigned int linenum);
 void _pall(stack_t **h, unsigned int linenum);
 void _pint(stack_t **stack, unsigned int line_number);
 void free_lineptr(stack_t **head);
+void _nop(stack_t **stack, unsigned int line_number);
 #endif

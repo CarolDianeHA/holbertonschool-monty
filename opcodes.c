@@ -46,3 +46,15 @@ void _pall(stack_t **h, unsigned int linenum)
 		tmp = tmp->next;
 	}
 }
+
+/**
+ * _nop - nothing
+ * @stack : double ptr to stack
+ * @line_number : line num
+ * Return: void
+ */
+void _nop(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+}

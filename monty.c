@@ -13,9 +13,12 @@ int main(int ac, char **av)
 	char *lineptr = NULL;
 	unsigned int linenum = 1;
 	FILE *fp;
-	(void)ac;
-
+	
+	if (ac != 2)
+		_perror(av[0], 0, 0);
 	fp = fopen(av[1], "r");
+	if (!fp)
+		_perror(av[1], 0, 1);
 	while (getline(&lineptr, &size, fp) != -1)
 	{
 		str = tokenizer(lineptr);

@@ -42,4 +42,5 @@ void _pall(stack_t **h, unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
 void free_lineptr(stack_t **head);
 void _nop(stack_t **stack, unsigned int line_number);
+void _perror(char *filename, int lineno, int errtype)
 #endif

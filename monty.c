@@ -19,7 +19,7 @@ int main(int ac, char **av)
 	fp = fopen(av[1], "r");
 	if (!fp)
 		_perror(av[1], 0, 1);
-		while (getline(&lineptr, &size, fp) != -1)
+	while (getline(&lineptr, &size, fp) != -1)
 	{
 		str = tokenizer(lineptr);
 		if (!str)

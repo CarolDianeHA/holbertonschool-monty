@@ -5,7 +5,6 @@
  * @line_number: line num
  * Return: void
  */
-
 void _pint(stack_t **stack, unsigned int line_number)
 {
 	if (stack == NULL || *stack == NULL)

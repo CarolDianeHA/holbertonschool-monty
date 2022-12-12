@@ -10,17 +10,22 @@
  * Return: Nothing
  */
 
-void matcher(char **str, char *lineptr, stack_t **h, FILE *fp, unsigned int linenum)
+void matcher(char **str, char *lineptr, stack_t **h,
+FILE *fp, unsigned int linenum)
 {
-
-	int i;
-	instruction_t fmt[] =
-	{
+	instruction_t fmt[] = {
 		{"push", _push},
-		{NULL,NULL}
+		{"pall", _pall},
+		{"pint", _pint},
+		{NULL, NULL},
 	};
+	int i;
+	(void)lineptr;
+	(void)fp;
+
 	if (strcmp(str[0], "push")  == 0)
-	{	if (str[1])
+	{
+		if (str[1])
 		linenum = atoi(str[1]);
 	}
 	for (i = 0; fmt[i].opcode != NULL; i++)
@@ -32,4 +37,3 @@ void matcher(char **str, char *lineptr, stack_t **h, FILE *fp, unsigned int line
 		}
 	}
 }
-

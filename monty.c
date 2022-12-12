@@ -1,9 +1,9 @@
 #include "monty.h"
 /**
-main - entry point
-@ac: ac
-@av: av
-Return: 0 if success.
+* main - entry point
+* @ac: ac
+* @av: av
+* Return: 0 if success.
 */
 int main(int ac, char **av)
 {
@@ -14,7 +14,8 @@ int main(int ac, char **av)
 	unsigned int linenum = 1;
 	FILE *fp;
 	(void)ac;
-	(void)av;
+
+	fp = fopen(av[1], "r");
 	while (getline(&lineptr, &size, fp) != -1)
 	{
 		str = tokenizer(lineptr);
@@ -27,7 +28,6 @@ int main(int ac, char **av)
 		linenum++;
 
 	}
+	fclose(fp);
 	return (0);
 }
-
-

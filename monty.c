@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
-* main - entry point
-* @ac: ac
-* @av: av
-* Return: 0 if success.
-*/
+ * main - entry point
+ * @ac: ac
+ * @av: av
+ * Return: 0 if success.
+ */
 int main(int ac, char **av)
 {
 	stack_t *head = NULL;

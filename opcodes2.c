@@ -33,3 +33,23 @@ void _swap(stack_t **stack, unsigned int line_number)
 	(*stack)->n = (*stack)->next->n;
 	(*stack)->next->n = tmp;
 }
+/**
+* _pop - ...
+* @stack: ...
+* @line_number: ...
+* Return: nothing
+*/
+void _pop(stack_t **stack, unsigned int line_number)
+{
+	if (stack == NULL || *stack == NULL)
+	{
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	if ((*stack)->next)
+	{
+		*stack = (*stack)->next;
+		free((*stack)->prev);
+		(*stack)->prev = NULL;
+	}
+}

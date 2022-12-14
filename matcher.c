@@ -40,4 +40,5 @@ void matcher(char **str, char *lineptr, stack_t **h,
 			return;
 		}
 	}
+	_perror(str[0], linenum, 3);
 }

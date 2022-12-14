@@ -1,26 +1,39 @@
 #include "monty.h"
 
 /**
- *tokenizer- split string in to tokens
- *@lineptr: input
- *Return: str, needs to be free
+ * tokenize - tokenizes a string into an array of strings
+ * @line: line to be tokenized
+ * Return: purse
  */
 
-char **tokenizer(char *lineptr)
+char **tokenizer(char *line)
 {
-	int num = 0;
-	int capacity =  25;
-	char **str = malloc(capacity * sizeof(char *));
-	char *delim = " \n\t\r:";
+	int i;
+	int bufsize = 800;
 
-	str[num] = strtok(lineptr, delim);
+	char *delim = " \n\a\t";
+	char *token;
+	char **str;
 
-	while (str[num] != NULL)
+	token = strtok(line, delim);
+
+	str = malloc(sizeof(char) * bufsize);
+	if (!str)
 	{
-		num++;
-		str[num] = strtok(NULL, delim);
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
 	}
 
+	for (i = 0; token != NULL; i++)
+	{
+		str[i] = token;
+		token = strtok(NULL, delim);
+	}
+	if ((!token && !*str) || *str[0] == '#')
+	{
+		free(str);
+		free(token);
+		return (NULL);
+	}
+	str[i] = NULL;
 	return (str);
-}
-

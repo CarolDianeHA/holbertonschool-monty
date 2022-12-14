@@ -1,20 +1,19 @@
 #include "monty.h"
 /**
- * free_list - frees list
+ * free_lineptr - frees all nodes
  * @head: head of list
- * Return: Nothing
  */
-
-void free_list(stack_t *head)
+void free_lineptr(stack_t **head)
 {
-	stack_t *current;
+	if (!head)
+		return;
 
-	while (head != NULL)
+	while (*head && (*head)->next)
 	{
-		current = head;
-		head = head->next;
-		free(current);
+		*head = (*head)->next;
+		free((*head)->prev);
 	}
+	free(*head);
 }
 
 /**

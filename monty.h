@@ -45,4 +45,5 @@ void _nop(stack_t **stack, unsigned int line_number);
 void _perror(char *filename, int lineno, int errtype);
 void _swap(stack_t **stack, unsigned int line_number);
 void _pop(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
 #endif

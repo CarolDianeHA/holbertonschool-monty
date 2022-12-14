@@ -29,6 +29,14 @@ void matcher(char **str, char *lineptr, stack_t **h,
 
 	if (strcmp(str[0], "push")  == 0)
 	{
+		if (!purse[1] || flag == 0)
+		{
+			free(str);
+			free(lineptr);
+			free(*h);
+			fclose(fp);
+			_perror("void", linenum, 2);
+		}
 		if (str[1])
 			linenum = atoi(str[1]);
 	}

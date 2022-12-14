@@ -29,7 +29,7 @@ void matcher(char **str, char *lineptr, stack_t **h,
 
 	if (strcmp(str[0], "push")  == 0)
 	{
-		if (!purse[1] || flag == 0)
+		if (!purse[1])
 		{
 			free(str);
 			free(lineptr);

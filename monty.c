@@ -32,7 +32,7 @@ int main(int ac, char **av)
 
 	}
 	free(lineptr);
-	free_list(head);
+	free(head);
 	fclose(fp);
 	return (0);
 }

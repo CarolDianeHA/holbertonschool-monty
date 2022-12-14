@@ -47,3 +47,21 @@ void _perror(char *filename, int lineno, int errtype)
 		exit(EXIT_FAILURE);
 	}
 }
+
+/**
+ * free_dlist - frees a list
+ * @head: head of list
+ * Return: Nothing
+ */
+
+void free_dlist(stack_t *head)
+{
+	stack_t *current;
+
+	while (head != NULL)
+	{
+		current = head;
+		head = head->next;
+		free(current);
+	}
+}

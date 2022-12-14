@@ -33,7 +33,7 @@ int main(int ac, char **av)
 
 	}
 	free(lineptr);
-	free(head);
+	free_dlist(head);
 	fclose(fp);
 	return (0);
 }

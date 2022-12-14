@@ -36,4 +36,5 @@ char **tokenizer(char *line)
 		return (NULL);
 	}
 	str[i] = NULL;
-	return (str);
+	return(str);
+}

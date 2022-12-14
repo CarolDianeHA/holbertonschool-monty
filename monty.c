@@ -29,6 +29,7 @@ int main(int ac, char **av)
 		}
 		matcher(str, lineptr, &head, fp, linenum);
 		linenum++;
+		free(str);
 
 	}
 	free(lineptr);

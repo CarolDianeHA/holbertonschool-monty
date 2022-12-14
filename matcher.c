@@ -33,7 +33,6 @@ void matcher(char **str, char *lineptr, stack_t **h,
 		{
 			free(str);
 			free(lineptr);
-			free(*h);
 			fclose(fp);
 			_perror("void", linenum, 2);
 		}

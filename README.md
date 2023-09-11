@@ -83,13 +83,13 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 * Any output must be printed on `stdout`
 * Any error message must be printed on `stderr`
 
-## Tests
+// ## Tests
 
-TBD
+// TBD
 
-## Flowchart
+// ## Flowchart
 
-TBD
+// TBD
 
 Carol Diane Hernandez [CarolDianeHA](https://github.com/CarolDianeHA)
 

@@ -1,4 +1,8 @@
-# Project Description
+# Project Title
+
+Monty
+
+## Project Description
 
 The goal of this project is to create an interpreter for Monty ByteCodes files.
 
